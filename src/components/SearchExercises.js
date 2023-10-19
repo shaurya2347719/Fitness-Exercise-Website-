@@ -15,7 +15,7 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
       setBodyParts(["all", ...bodyPartsData]);  // sets bodyParts with data of bodyPartsdata along with "all" also appended to it.
     };
     fetchExercisesData();
-  }, []);
+  }, []); // Used to send data to print all the bodyparts in the HorizontalScrollBar.
   const handleSearch = async () => {
     if (search) {  // checks if search is non-empty string.
       const excerciseData = await fetchData(
@@ -79,7 +79,7 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
           Search
         </Button>
       </Box>
-      <Box sx={{ position: "relative", width: "100%", p: "20px" }}>
+      <Box sx={{ position: "relative", width: "100%", p: "20px" }}> // This will print all the bodyparts in the Horizontal Scroll Bar.
         <HorizontalScrollbar  // data,bodyParts and bodyPart are passed to <HorizontalScrollbar> in HorizontalScrollBar.js
           data={bodyParts}
           bodyPart={bodyPart}
