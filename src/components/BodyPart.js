@@ -30,7 +30,7 @@ const BodyPart = ({ item, setBodyPart, bodyPart }) => {
             }
       }
       onClick={() => {
-        setBodyPart(item);
+        setBodyPart(item);  // useEffect() in Exercises.js will be called. 
         window.scrollTo({ top: 1800, left: 100, behavior: "smooth" });
       }}
     >
