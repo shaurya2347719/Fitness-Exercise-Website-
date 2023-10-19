@@ -1,3 +1,4 @@
+// This file component is for how each bodypart in the HorizontalScrollBar is defined.
 import React from "react";
 import { Stack, Typography } from "@mui/material";
 
@@ -30,7 +31,7 @@ const BodyPart = ({ item, setBodyPart, bodyPart }) => {
             }
       }
       onClick={() => {
-        setBodyPart(item);  // useEffect() in Exercises.js will be called. 
+        setBodyPart(item);  // useEffect() in Exercises.js will be called since it is loaded in app.js and its usestate is passed into Exercises.js from there.. 
         window.scrollTo({ top: 1800, left: 100, behavior: "smooth" });
       }}
     >
