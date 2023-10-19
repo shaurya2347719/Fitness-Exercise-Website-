@@ -12,7 +12,7 @@ const ExerciseDetail = () => {
   const [exerciseVideos, setExerciseVideos] = useState([]);
   const [targetMuscleExercises, setTargetMuscleExercises] = useState([]);
   const [equipmentExercises, setEquipmentExercises] = useState([]);
-  const { id } = useParams();
+  const { id } = useParams();  // It is used to acces parameter from the route which is done from app.js and assign it to id.
   useEffect(() => {
     const fetchExercisesData = async () => {
       const exerciseDbUrl = "https://exercisedb.p.rapidapi.com";
@@ -42,8 +42,8 @@ const ExerciseDetail = () => {
   }, [id]);
   return (
     <Box>
-      <Detail exerciseDetail={exerciseDetail} />
-      <ExerciseVideos
+      <Detail exerciseDetail={exerciseDetail} />  // Passing parameter in the component Detail.js
+      <ExerciseVideos  // Passing parameter in the component ExerciseVideos.js
         exerciseVideos={exerciseVideos}
         name={exerciseDetail.name}
       />
