@@ -8,7 +8,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const exercisesPerPage = 9;
 
-  useEffect(() => {
+  useEffect(() => {    // useEffect will run this function whenever the bodyPart variable is changed which is present in its arguement.
     const fetchExercisesData = async () => {
       let exercisesData = [];
 
@@ -31,9 +31,9 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
   }, [bodyPart]);
 
   // Pagination
-  const indexOfLastExercise = currentPage * exercisesPerPage;
-  const indexOfFirstExercise = indexOfLastExercise - exercisesPerPage;
-  const currentExercises = exercises.slice(
+  const indexOfLastExercise = currentPage * exercisesPerPage;  // currentPage is initialised with 1 and exercisesPerPage is initialised with 9 above.
+  const indexOfFirstExercise = indexOfLastExercise - exercisesPerPage;  // calculated index of first page
+  const currentExercises = exercises.slice(  // Last index to used in slice should be such that it is not to be included so indexofLastExercise is calculated accordingly.
     indexOfFirstExercise,
     indexOfLastExercise
   );
