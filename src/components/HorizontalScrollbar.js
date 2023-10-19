@@ -1,3 +1,4 @@
+// This file component has been called from SearchExercises.js and Similarexercises.js
 import React, { useContext } from "react";
 import { Box, Typography } from "@mui/material";
 import { ScrollMenu, VisibilityContext } from "react-horizontal-scrolling-menu";
