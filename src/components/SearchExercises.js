@@ -1,28 +1,28 @@
 import React, { useEffect, useState } from "react";
 import { Box, Button, Stack, TextField, Typography } from "@mui/material";
 
-import { exerciseOptions, fetchData } from "../utils/fetchData";
+import { exerciseOptions, fetchData } from "../utils/fetchData";  // import exerciseOptions and fetchData from fetchData.js file 
 import HorizontalScrollbar from "./HorizontalScrollbar";
 const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
   const [search, setSearch] = useState("");
   const [bodyParts, setBodyParts] = useState([]);
-  useEffect(() => {
+  useEffect(() => {  // This useEffect will run given function immediately when this component is mounted due to the empty dependency [].And it runs only once.
     const fetchExercisesData = async () => {
       const bodyPartsData = await fetchData(
         "https://exercisedb.p.rapidapi.com/exercises/bodyPartList",
         exerciseOptions
       );
-      setBodyParts(["all", ...bodyPartsData]);
+      setBodyParts(["all", ...bodyPartsData]);  // sets bodyParts with data of bodyPartsdata along with "all" also appended to it.
     };
     fetchExercisesData();
   }, []);
   const handleSearch = async () => {
-    if (search) {
+    if (search) {  // checks if search is non-empty string.
       const excerciseData = await fetchData(
         "https://exercisedb.p.rapidapi.com/exercises",
         exerciseOptions
       );
-      const searchedExercises = excerciseData.filter(
+      const searchedExercises = excerciseData.filter(  // filters all data with given conditions and return it to searchedExercises variable.
         (exercise) =>
           exercise.name.toLowerCase().includes(search) ||
           exercise.target.toLowerCase().includes(search) ||
@@ -58,7 +58,7 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
           }}
           height="76px"
           value={search}
-          onChange={(e) => setSearch(e.target.value.toLowerCase())}
+          onChange={(e) => setSearch(e.target.value.toLowerCase())}  // sets the search with the value e passed in the arguement.
           placeholder="Search Exercises"
           type="text"
         />
@@ -74,13 +74,13 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
             position: "absolute",
             right: "0",
           }}
-          onClick={handleSearch}
+          onClick={handleSearch}  // On clicking the search button onclick event happens and handleSearch is called.
         >
           Search
         </Button>
       </Box>
       <Box sx={{ position: "relative", width: "100%", p: "20px" }}>
-        <HorizontalScrollbar
+        <HorizontalScrollbar  // data,bodyParts and bodyPart are passed to <HorizontalScrollbar> in HorizontalScrollBar.js
           data={bodyParts}
           bodyPart={bodyPart}
           setBodyPart={setBodyPart}
