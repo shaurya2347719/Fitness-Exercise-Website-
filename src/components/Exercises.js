@@ -1,3 +1,4 @@
+// This file is for printing all the exercises on clicking from bodyparts or by searching from search bar.
 import React, { useEffect, useState } from "react";
 import Pagination from "@mui/material/Pagination";
 import { Box, Stack, Typography } from "@mui/material";
