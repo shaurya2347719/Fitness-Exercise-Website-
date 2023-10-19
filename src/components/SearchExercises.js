@@ -1,4 +1,4 @@
-// This file component is for handling search and for also printing all the bodyparts on the HorizontalScrollBar.
+// This file component is for handling search and will also print all the bodyparts on the HorizontalScrollBar.
 import React, { useEffect, useState } from "react";
 import { Box, Button, Stack, TextField, Typography } from "@mui/material";
 
