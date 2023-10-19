@@ -35,7 +35,7 @@ const HorizontalScrollbar = ({ data, bodyPart, setBodyPart,isBodyParts }) => {
           title={item.id || item}
           m="0 40px"
         >
-          {isBodyParts ? <BodyPart item={item} setBodyPart={setBodyPart} bodyPart={bodyPart} /> : <ExerciseCard exercise={item} /> }  // <BodyPart> is the body parts name in first scrollbar and exercise cards are the gifs in the 2nd scroll bar.
+          {isBodyParts ? <BodyPart item={item} setBodyPart={setBodyPart} bodyPart={bodyPart} /> : <ExerciseCard exercise={item} /> }  // This is done to differentiate access from SearchExercises.js and SimilarExercises.js.<BodyPart> is the different body part names inside the scrollbar and exercise cards are different exercise gifs inside the scrollbar.
         </Box>
       ))}
     </ScrollMenu>
