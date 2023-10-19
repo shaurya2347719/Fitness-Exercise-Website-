@@ -7,11 +7,11 @@ import RightArrowIcon from "../assets/icons/right-arrow.png";
 import LeftArrowIcon from "../assets/icons/left-arrow.png";
 import ExerciseCard from "./ExerciseCard";
 const LeftArrow = () => {
-  const { scrollPrev } = useContext(VisibilityContext);
+  const { scrollPrev } = useContext(VisibilityContext);  // usecontext() is used to access {scrollPrev} from VisibilityContext.usecontext() hook is generally used in react to access value from a component higher in the dom-tree without traversing to all the child heireachelly.
 
   return (
     <Typography onClick={() => scrollPrev()} className="right-arrow">
-      <img src={LeftArrowIcon} alt="left-arrow" />
+      <img src={LeftArrowIcon} alt="left-arrow" />  // alt is used to display alternate text if the image don't loads.
     </Typography>
   );
 };
