@@ -62,7 +62,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
       </Stack>
       <Stack mt="100px" alignItems="center">
         {exercises.length > 9 && (
-          <Pagination
+          <Pagination  // This will divide and put the exercise cards into different pages.
             color="standard"
             shape="rounded"
             defaultPage={1}
