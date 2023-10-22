@@ -57,7 +57,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
       >
         {" "}
         {currentExercises.map((exercise, index) => (
-          <ExerciseCard key={index} exercise={exercise} />
+          <ExerciseCard key={index} exercise={exercise} />  // This key component cannot be directly accesed from ExerciseCard component.React uses it internally to optimise rendering process.It is used when we are rendering a dynamic list. 
         ))}
       </Stack>
       <Stack mt="100px" alignItems="center">
