@@ -11,7 +11,7 @@ const App = () => {
   return (
     <Box width="400px" sx={{ width: { xl: "1488px" } }} m="auto">
       <Navbar />
-      <Routes>  // <Routes> is the Container for our route definitions.When the URL matches "/", the <Home /> component will be rendered.The other Route path line defines a dynamic route with a parameter (:id).The : before id indicates that id is a route parameter,and it can have any value.The route parameter id will be passed as a prop to the ExerciseDetail component. 
+      <Routes>  // <Routes> is the Container for our route definitions.When the URL matches "/", the <Home /> component will be rendered.The other Route path line defines a dynamic route with a parameter (:id).The : before id indicates that id is a route parameter,and it can have any value.The route parameter id will be passed as a prop to the ExerciseDetail component.This parameter would be accesed using useparams() in ExerciseDetails.js. 
         <Route path="/" element={<Home />} />  
         <Route path="/exercise/:id" element={<ExerciseDetail />} />  
       </Routes>  
