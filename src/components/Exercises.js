@@ -38,7 +38,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
     indexOfFirstExercise,
     indexOfLastExercise
   );
-  const paginate = (event, value) => {
+  const paginate = (event, value) => {  // Defining a paginate function for handling onchange event of Pagination.
     setCurrentPage(value);
 
     window.scrollTo({ top: 1800, behavior: "smooth" });
