@@ -38,7 +38,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
     indexOfFirstExercise,
     indexOfLastExercise
   );
-  const paginate = (event, value) => {  // Defining a paginate function for handling onchange event of Pagination.In case of complex components like pagination which i provided by certain libraries or frameworks like MaterialUI some additional information is also provided along with the event object.In case of pagination it also provides selected page number along with the event object.
+  const paginate = (event, value) => {  // Defining a paginate function for handling onchange event of Pagination.In case of complex components like pagination which is provided by certain libraries or frameworks like MaterialUI some additional information is also provided along with the event object.In case of pagination it also provides selected page number along with the event object.
     setCurrentPage(value);
 
     window.scrollTo({ top: 1800, behavior: "smooth" });
