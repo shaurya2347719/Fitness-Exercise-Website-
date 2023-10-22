@@ -66,9 +66,9 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
             color="standard"
             shape="rounded"
             defaultPage={1}
-            count={Math.ceil(exercises.length / exercisesPerPage)}
-            page={currentPage}
-            onChange={paginate}
+            count={Math.ceil(exercises.length / exercisesPerPage)}  // The no. of exercise cards which has to be there on one page.
+            page={currentPage}  // The current active page.
+            onChange={paginate}  // The event and the selected page number will automatically be passed to the paginate function which has been defined above.
             size="large"
           />
         )}
