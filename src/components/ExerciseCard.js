@@ -5,7 +5,7 @@ import { Button, Stack, Typography } from "@mui/material";
 const ExerciseCard = ({ exercise }) => {
   return (
     <Link className="exercise-card" to={`/exercise/${exercise.id}`}>  // This will be routed from the route present in app.js to /pages/ExerciseDetails.js
-      <img src={exercise.gifUrl} alt={exercise.name} loading="lazy" />  
+      <img src={exercise.gifUrl} alt={exercise.name} loading="lazy" />  // Lazy loading has been implemented.
       <Stack direction="row">
         <Button
           sx={{
