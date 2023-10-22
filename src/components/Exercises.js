@@ -9,7 +9,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const exercisesPerPage = 9;
 
-  useEffect(() => {    // useEffect will run this function whenever the bodyPart variable is changed which is present in its arguement.
+  useEffect(() => {    // useEffect will run this function whenever the bodyPart variable is changed which is present in its arguement.This is being done from setbodypart in bodypart.js.
     const fetchExercisesData = async () => {
       let exercisesData = [];
 
